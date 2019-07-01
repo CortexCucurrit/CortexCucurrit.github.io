@@ -35,3 +35,5 @@ typings/
 .env
 .sass-cache/
 *.css.map
+.vs/slnx.sqlite
+.vs/slnx.sqlite
