@@ -19,7 +19,7 @@
 
 </head>
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light" id="topNav" style="display: none;">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -44,10 +44,10 @@
                     <a class="nav-link scroll-link" href="#things-to-do" id="navThingsToDo">Things To Do</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link scroll-link" href="#photos" id="navPhotos">Photos</a>
+                    <a class="nav-link scroll-link" href="#photos" id="navPhotos" style="display: none;">Photos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" id="navRegistry">Registry</a>
+                    <a class="nav-link" href="#" id="navRegistry" style="display: none;">Registry</a>
                 </li>
                 <li class="nav-item">
                     <button class="nav-link btn btn-outline-dark" onclick="openWindow('https://www.theknot.com/us/grace-ogilby-and-daniel-corkran-aug-2020/rsvp');" id="navRSVP">RSVP</button>
@@ -57,27 +57,41 @@
     </nav>
 
     <div class="header fullscreen" id="welcome">
-        <div class="hero">
-            <h1>Grace & Daniel</h1>
-            <h4>August 1, 2020 &#8226; Mount Desert Island, Maine</h4>
+        <div class="container">
+            <div class="hero">
+                <h1>Grace & Daniel</h1>
+                <h4>August 1, 2020 &#8226; Mount Desert Island, Maine</h4>
+            </div>
+            <div class="card" id="login">
+                <div class="card-body background-1">
+                    <form class="form-group login" id="login-form" autocomplete="off">
+                        <div class="form-group">
+                            <label for="inputPassword">Please enter the password from your invitation</label>
+                            <input class="form-control" type="password" id="inputPassword" placeholder="Enter Password" required="" autocomplete="new-password" />
+                            <div class="invalid-feedback">Please enter a valid password.</div>
+                        </div>
+                        <button type="submit" class="btn btn-outline-dark" style="margin-top: 20px;" id="btnLogin">Submit</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="jumbotron jumbotron-flex background-1" id="join-us">
+    <div class="jumbotron jumbotron-flex background-1" id="join-us" style="display: none;">
         <div class="container content">
             <h3>Join Us in Maine!</h3>
             <hr class="my-4" />
             <p>
                 Welcome to our wedding website!  We are excited to celebrate with you as we take this big step together.  We are getting married on Mount Desert Island in Maine, where Grace spent her childhood summers.  These days, we spend as many spring and summer weekends as we can on Mount Desert, where we spend time with family hiking, boating, biking, and eating lots of lobster and blueberry pancakes.  Mount Desert Island is a special place for us, and we are excited to share it with you!
-                <br />Mount Desert Island is home to Acadia National Park and is a popular summer vacation destination.  We encourage our guests to book airfare, hotel rooms, and (if desired) rental cars as soon as possible due to high demand during the summer months.  You can find more information about how to get to the island on the "Getting to Maine" page of this website, and information about hotel blocks can be found on the "Where to Stay" page.  See you in Maine!
+                <br />Mount Desert Island is home to Acadia National Park and is a popular summer vacation destination.  We encourage our guests to book airfare, hotel rooms, and (if desired) rental cars as soon as possible due to high demand during the summer months.  You can find more information about how to get to the island on the "Getting to Maine" page of this website, and information about hotel blocks can be found on the "Accommodations" page.  See you in Maine!
             </p>
         </div>
     </div>
 
-    <div class="jumbotron jumbotron-flex background-2" id="events">
+    <div class="jumbotron jumbotron-flex background-2" id="events" style="display: none;">
         <div class="container content">
             <h2>Events</h2>
-            <div id="rehearsal">
+            <div id="rehearsal" style="display: none;">
                 <hr class="my-4" />
                 <div class="card">
                     <img src="/img/mdi-sailboat.jpg" class="card-img-top card-image" alt="Oops..." />
@@ -110,7 +124,7 @@
                     </div>
                 </div>
             </div>
-            <div id="ceremony">
+            <div id="ceremony" style="display: none;">
                 <hr class="my-4" />
                 <div class="card">
                     <img src="/img/st-judes.jpg" class="card-img-top card-image" alt="Oops..." />
@@ -152,7 +166,7 @@
         </div>
     </div>
 
-    <div class="jumbotron jumbotron-flex background-1" id="accommodations">
+    <div class="jumbotron jumbotron-flex background-1" id="accommodations" style="display: none;">
         <div class="container content">
             <h2>Where to Stay</h2>
             <hr class="my-4" />
@@ -186,7 +200,7 @@
         </div>
     </div>
 
-    <div class="jumbotron jumbotron-flex background-2" id="travel">
+    <div class="jumbotron jumbotron-flex background-2" id="travel" style="display: none;">
         <div class="container content">
             <h2>Getting to Maine</h2>
             <hr class="my-4" />
@@ -213,7 +227,7 @@
         </div>
     </div>
 
-    <div class="jumbotron jumbotron-flex background-1" id="things-to-do" style="margin-bottom: 0px;">
+    <div class="jumbotron jumbotron-flex background-1" id="things-to-do" style="margin-bottom: 0px; display: none;">
         <div class="container content">
             <h2>Things to Do</h2>
             <hr class="my-4" />
@@ -276,7 +290,7 @@
             </div>
         </div>
     </div>
-    <div class="jumbotron jumbotron-flex background-2" id="things-to-do" style="margin-bottom: 0px;">
+    <div class="jumbotron jumbotron-flex background-2" id="rsvp-container" style="margin-bottom: 0px; display: none;">
         <div class="container content">
             <h3>Have you submitted your RSVP?</h3>
             <span>You can do it right now, and it only takes a minute!</span>
