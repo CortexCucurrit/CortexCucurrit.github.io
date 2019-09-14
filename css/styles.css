@@ -1,0 +1,111 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding-bottom: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+a {
+    color: black;
+    text-decoration: underline;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 50px;
+}
+
+.header {
+    background-image: url('../img/mdi-sailboat-race.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fullscreen {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+}
+
+nav {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+}
+
+.content {
+    text-align: center;
+}
+
+.content-left {
+    text-align: left;
+}
+
+.card-image {
+    height: 35vh;
+    object-fit: scale-down;
+    padding-top: 15px;
+}
+
+.hotel-image {
+    height: 25vh;
+    object-fit: scale-down;
+    padding-top: 15px;
+}
+
+.hotel-btn {
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.background-1 {
+    background-color: #ffffff; /*Pure White*/
+}
+
+.background-2 {
+    background-color: #F5F5F5; /*White Smoke*//*#F4F3E8; Cream*/
+}
+
+.card {
+    background-color: inherit;
+    margin-top: 5px;
+}
+
+ol, ul {
+    text-align: left;
+}
+
+.center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.btn-big {
+    font-size: 60px;
+}
