@@ -2,9 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\css",
+    "\\fonts",
     "\\img",
-    "\\js"
+    "\\js",
+    "\\json"
   ],
-  "SelectedNode": "\\img\\mdi-sailboat-race.jpg",
+  "SelectedNode": "\\js\\scripts.js",
   "PreviewInSolutionExplorer": false
 }

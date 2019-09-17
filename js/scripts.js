@@ -1,4 +1,4 @@
-$("#btnLogin").click(function (event) {
+$("#login-form").submit(function (event) {
     formHandler(event);
 });
 
@@ -31,6 +31,7 @@ function formHandler(event) {
             break;
         case "Westover":
             toggleDisplay('topNav');
+            toggleDisplay('navPhotos');
             toggleDisplay('join-us');
             toggleDisplay('events');
             toggleDisplay('accommodations');
@@ -41,8 +42,9 @@ function formHandler(event) {
             toggleDisplay('ceremony');
             toggleDisplay('login');
             break;
-        case "SealHarbor":
+        case "Seal Harbor":
             toggleDisplay('topNav');
+            toggleDisplay('navPhotos');
             toggleDisplay('join-us');
             toggleDisplay('events');
             toggleDisplay('accommodations');
@@ -52,8 +54,9 @@ function formHandler(event) {
             toggleDisplay('ceremony');
             toggleDisplay('login');
             break;
-        case "BarHarbor":
+        case "Bar Harbor":
             toggleDisplay('topNav');
+            toggleDisplay('navPhotos');
             toggleDisplay('join-us');
             toggleDisplay('events');
             toggleDisplay('accommodations');
@@ -63,7 +66,7 @@ function formHandler(event) {
             toggleDisplay('login');
             break;
         default:
-            console.log("Credential is invalid");
+            toggleDisplay('invalidForm');
     }
 }
 
@@ -72,7 +75,6 @@ function scroll_at(clicked_link, nav_height) {
     console.log(element_id);
     var scroll_to = 0;
     if (element_id.length) {
-        //element_class += '-container';
         console.log($(element_id).offset().top);
         if ($(element_id).offset().top > nav_height) {
             scroll_to = $(element_id).offset().top - nav_height;
@@ -86,6 +88,16 @@ function scroll_at(clicked_link, nav_height) {
 
 function openWindow(url) {
     window.open(url, '_blank');
+}
+
+function openNav() {
+    document.getElementById("photoOverlay").style.display = "block";
+    document.getElementById("topNav").style.display = "none";
+}
+
+function closeNav() {
+    document.getElementById("photoOverlay").style.display = "none";
+    document.getElementById("topNav").style.display = "block";
 }
 
 jQuery(document).ready(function () {
