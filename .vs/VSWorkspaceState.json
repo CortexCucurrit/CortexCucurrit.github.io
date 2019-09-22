@@ -2,10 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\css",
-    "\\fonts",
-    "\\img",
+    "\\img\\eng_pics",
     "\\js",
-    "\\json"
+    "\\js\\vendor"
   ],
   "SelectedNode": "\\js\\scripts.js",
   "PreviewInSolutionExplorer": false

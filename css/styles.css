@@ -31,20 +31,21 @@ a {
 }
 
 .header {
-    background-image: url('../img/little-long-pond.jpg');
+    background-image: url('../img/little-long-pond-1.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.fullscreen {
-    height: 100%;
+
+/*.fullscreen {
+    height: 100vh;
     display: flex;
     align-items: center;
     align-content: center;
     text-align: center;
     justify-content: center;
     align-items: center;
-}
+}*/
 
 .hero {
     color: #ffffff;
@@ -71,16 +72,17 @@ nav li {
 }
 
 .card-image {
-    height: 35vh;
+    /*height: 35vh;*/
+    max-height: 200px;
     object-fit: scale-down;
-    padding-top: 15px;
+    /*padding-top: 15px;*/
 }
 
-.hotel-image {
+/*.hotel-image {
     height: 25vh;
     object-fit: scale-down;
     padding-top: 15px;
-}
+}*/
 
 .modal-image {
     object-fit: contain;
@@ -92,15 +94,16 @@ nav li {
     background-color: black;
 }
 
-.slider-size {
-    height: 80vh;
+/*.slider-size {
+    height: 80%;
+    height: calc(100% - 25px);
 }
 
 .carousel {
     width: 100%;
-    height: 80vh;
+    height: 100% !important;
     margin: 0 auto;
-}
+}*/
 
 .carousel-caption {
     position: relative;
@@ -110,6 +113,15 @@ nav li {
     font-family: 'Playfair Display', serif;
     font-style: normal;
     color: black;
+}
+
+.carousel .carousel-indicators li {
+    background-color: #fff;
+    background-color: rgba(70,70,70,.25);
+}
+
+.carousel .carousel-indicators .active {
+    background-color: #444;
 }
 
 .hotel-btn {
