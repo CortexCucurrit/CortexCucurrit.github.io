@@ -31,7 +31,11 @@ function formHandler(event) {
     if (hasLocalStorage() === true) {
         credential = window.localStorage.getItem('userPassword');
     } else {
-        credential = $("#inputPassword").val();
+        if ($("#inputPassword").val()) {
+            credential = $("#inputPassword").val();
+        } else {
+            credential = null;
+        }
     }
     
     switch (credential) {
