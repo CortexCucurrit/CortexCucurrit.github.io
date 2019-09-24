@@ -1,4 +1,5 @@
 $("#login-form").submit(function (event) {
+    window.localStorage.setItem('userPassword', $("#inputPassword").val());
     formHandler(event);
 });
 
@@ -13,8 +14,11 @@ function toggleDisplay(item) {
 
 function formHandler(event) {
     event.preventDefault();
-    var credential = $("#inputPassword").val();
+    //var credential = $("#inputPassword").val();
+    var credential = window.localStorage.getItem('userPassword');
     switch (credential) {
+        case null:
+            break;
         case "CarriageHouse":
             toggleDisplay('topNav');
             toggleDisplay('navPhotos');
