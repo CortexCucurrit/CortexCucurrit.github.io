@@ -1,7 +1,20 @@
 $("#login-form").submit(function (event) {
-    window.localStorage.setItem('userPassword', $("#inputPassword").val());
+    if (hasLocalStorage() === true) {
+        window.localStorage.setItem('userPassword', $("#inputPassword").val());
+    }
     formHandler(event);
 });
+
+function hasLocalStorage() {
+    var test = 'test';
+    try {
+        localStorage.setItem('test1', test);
+        localStorage.removeItem(test1);
+        return true;
+    } catch (e) {
+        return false;
+    }
+}
 
 function toggleDisplay(item) {
     var x = document.getElementById(item);
@@ -14,8 +27,13 @@ function toggleDisplay(item) {
 
 function formHandler(event) {
     event.preventDefault();
-    //var credential = $("#inputPassword").val();
-    var credential = window.localStorage.getItem('userPassword');
+    var credential;
+    if (hasLocalStorage() === true) {
+        credential = window.localStorage.getItem('userPassword');
+    } else {
+        credential = $("#inputPassword").val();
+    }
+    
     switch (credential) {
         case null:
             break;
