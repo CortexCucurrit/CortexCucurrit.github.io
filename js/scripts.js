@@ -8,8 +8,8 @@ $("#login-form").submit(function (event) {
 function hasLocalStorage() {
     var test = 'test';
     try {
-        localStorage.setItem('test1', test);
-        localStorage.removeItem(test1);
+        window.localStorage.setItem('test1', test);
+        window.localStorage.removeItem('test1');
         return true;
     } catch (e) {
         return false;
