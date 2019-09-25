@@ -3,6 +3,7 @@ $("#login-form").submit(function (event) {
         window.localStorage.setItem('userPassword', $("#inputPassword").val());
     }
     formHandler(event);
+    location.reload();
 });
 
 function hasLocalStorage() {
