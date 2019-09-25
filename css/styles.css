@@ -171,8 +171,8 @@ ol, ul {
     min-height: 100vh;
 }
 
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
     .modal-xl {
         width: 90vw;
     }
-}
+}*/
