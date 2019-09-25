@@ -1,9 +1,11 @@
 $("#login-form").submit(function (event) {
     if (hasLocalStorage() === true) {
         window.localStorage.setItem('userPassword', $("#inputPassword").val());
+        formHandler(event);
+        location.reload();
+    } else {
+        formHandler(event);
     }
-    formHandler(event);
-    location.reload();
 });
 
 function hasLocalStorage() {
