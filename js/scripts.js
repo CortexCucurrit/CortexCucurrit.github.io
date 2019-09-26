@@ -1,12 +1,12 @@
-$("#login-form").submit(function (event) {
-    if (hasLocalStorage() === true) {
-        window.localStorage.setItem('userPassword', $("#inputPassword").val());
-        formHandler(event);
-        location.reload();
-    } else {
-        formHandler(event);
-    }
-});
+//$("#login-form").submit(function (event) {
+//    if (hasLocalStorage() === true) {
+//        window.localStorage.setItem('userPassword', $("#inputPassword").val());
+//        formHandler(event);
+//        location.reload();
+//    } else {
+//        formHandler(event);
+//    }
+//});
 
 function hasLocalStorage() {
     var test = 'test';

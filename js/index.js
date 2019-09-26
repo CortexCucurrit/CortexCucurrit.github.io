@@ -1,3 +1,3 @@
-window.onload = function (event) {
-    formHandler(event);
-}
+//window.onload = function (event) {
+//    formHandler(event);
+//}
