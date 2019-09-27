@@ -1,0 +1,22 @@
+.card {
+    background-color: rgba(0,0,0,0.5) !important;
+}
+
+.input-group-prepend span {
+    width: 50px;
+    background-color: #F5F5F5;
+    color: black;
+    border: 0 !important;
+}
+
+input:focus {
+    outline: 0 0 0 0 !important;
+    box-shadow: 0 0 0 0 !important;
+}
+
+.login-header {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
