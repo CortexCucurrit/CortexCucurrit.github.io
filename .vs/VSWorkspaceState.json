@@ -2,9 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\css",
-    "\\js",
-    "\\js\\vendor"
+    "\\js"
   ],
-  "SelectedNode": "\\js\\scripts.js",
+  "SelectedNode": "\\index.html",
   "PreviewInSolutionExplorer": false
 }
